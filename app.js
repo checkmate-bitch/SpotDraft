@@ -50,6 +50,10 @@ app.get("*", (req, res) => {
     res.send("Invalid Page Requested");
 });
 
-app.listen(3000, () => {
-    console.log("Big Brother is listening");
+// app.listen(3000, () => {
+//     console.log("Big Brother is listening");
+// });
+
+app.listen(process.env.PORT, process.env.IP, function () {
+    console.log("Big Brother is Listening!");
 });

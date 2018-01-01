@@ -35,3 +35,15 @@ td, th {
     border: 1px solid #999;
     padding: 0.5rem;
 }
+
+#top-seller {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+#top-seller img {
+    margin-right: 15px;
+}

@@ -16,6 +16,13 @@
             </form>
         </nav>
 
+        <% if(topSellerURL) { %>
+            <section id="top-seller">
+                <img src="<%= topSellerURL %>">
+                <h1><%= results[noOfResults-1].title %>
+            </section>
+        <% } %>
+
 <% if(noOfResults > 0) { %>
     <table>    
         <tr>

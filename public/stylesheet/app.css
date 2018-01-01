@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin-top: 30px;
+}
+
+#menu-container {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#menu-container > h2 {
+    margin-bottom: 10px;
+}
+
+#menu-container form button {
+    padding: 6px 14px 6px 14px;
+}
+
+#menu-container form select {
+    padding: 6px 14px 6px 14px;
+}
+
+table {
+    margin: 0 auto;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid #999;
+    padding: 0.5rem;
+}

@@ -5,8 +5,11 @@ const express = require("express"),
 let URL = "http://api.nytimes.com/svc/books/v3/lists";
 const key = "f3f3b41cc93a40b8a7869ddbdd0b6bb5";
 
-//ejs
+// set ejs
 app.set("view engine", "ejs");
+
+// set stylesheets and other static assets from public
+app.use(express.static(__dirname + "/public"));
 
 app.get("/", (req, res) => {
     const list = req.query.list;

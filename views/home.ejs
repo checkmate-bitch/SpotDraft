@@ -1,5 +1,40 @@
 <% include partials/header %>
 
-<h1>WELCOME ISMALER</h1>
+        <nav id="menu-container">
+            <h2>Select a List</h2>
+            <form action="/" method="GET">
+                <select name="list" class="menu">
+                    <option value="hardcover-fiction" <%= selectVal === "hardcover-fiction" ? "selected" : "" %>>Hardcover Fiction</option>
+                    <option value="hardcover-nonfiction" <%= selectVal === "hardcover-nonfiction" ? "selected" : "" %>>Hardcover Non-Fiction</option>
+                    <option value="paperback-nonfiction" <%= selectVal === "paperback-nonfiction" ? "selected" : "" %>>Paperback Non-Fiction</option>
+                    <option value="science" <%= selectVal === "science" ? "selected" : "" %>>Science</option>
+                    <option value="sports" <%= selectVal === "sports" ? `selected` : "" %>>Sports</option>
+                    <option value="fashion manners and customs" <%= selectVal === "fashion manners and customs" ? "selected" : "" %>>Fashion Manners and Customs</option>
+                    <option value="Expeditions Disasters and Adventures" <%= selectVal === "Expeditions Disasters and Adventures" ? "selected" : "" %>>Expeditions Disasters and Adventures</option>
+                </select>
+                <button>Go</button>
+            </form>
+        </nav>
+
+<% if(noOfResults > 0) { %>
+    <table>    
+        <tr>
+            <th>Rank</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Publisher</th>
+            <th>Published Date</th>
+        </tr>
+        <% for(let result of results) { %>
+            <tr>
+                <td><%= result.rank %></td>
+                <td><%= result.title %></td>
+                <td><%= result.author %></td>
+                <td><%= result.publisher %></td>
+                <td><%= result.published_date %></td>
+            </tr>
+        <% } %>
+    </table>
+<% } %>
 
 <% include partials/footer %>
